@@ -25,12 +25,16 @@ en:
   prev: "previous"
   next: "next"
   welcome_message: "Welcome to Book Reviewing System"
+  fail_login: "Invalid email or password"
   header:
     logo: "Book store"
     admin: "admin"
     home: "Home"
     signup: "Sign up"
     login : "Login"
+    logout: "Logout"
+    profile: "Profile"
+    settings: "Settings"
   footer:
     developer: "Dev: Thuy Viet Quoc - Tran Thanh Tam-Le Quang Canh"
     phone: "Phone: 09091991191"
@@ -46,7 +50,6 @@ en:
       signup: "Sign up"
       create_btn: "Create my account"
       signup_title: "Sign up"
-  
   admin:
     base:
       check_admin_permission:
@@ -87,3 +90,8 @@ en:
       update:
         failed: "Category update failed"
         updated: "Category update successful"
+  sessions:
+    new:
+      login: "Log in"
+      signup: "Sign up now!"
+      new_user: "New user?"

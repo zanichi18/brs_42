@@ -52,8 +52,19 @@ $border-color: #eaeaea;
    color: white;
  }
 
- #menu-top li:hover{
+ #menu-top li:hover {
    background-color: #004D40;
+ }
+
+ .dropdown-menu {
+   background-color: #00897b;
+   a:hover {
+     background-color: #004D40 !important;
+   }
+ }
+
+ .dropdown a:focus {
+   background-color: #004D40 !important;
  }
 
  footer {
