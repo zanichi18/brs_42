@@ -24,6 +24,7 @@ en:
   title: "Book store"
   prev: "previous"
   next: "next"
+  welcome_message: "Welcome to Book Reviewing System"
   header:
     logo: "Book store"
     admin: "admin"
@@ -36,3 +37,12 @@ en:
     address: "Book Store VN"
   home:
     book: "Book Review System"
+  shared:
+    error_messages:
+      error_message: "The form contains "
+      error: "error"
+  users:
+    new:
+      signup: "Sign up"
+      create_btn: "Create my account"
+      signup_title: "Sign up"
