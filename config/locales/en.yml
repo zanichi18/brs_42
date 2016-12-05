@@ -22,3 +22,17 @@
 en:
   hello: "Hello world"
   title: "Book store"
+  prev: "previous"
+  next: "next"
+  header:
+    logo: "Book store"
+    admin: "admin"
+    home: "Home"
+    signup: "Sign up"
+    login : "Login"
+  footer:
+    developer: "Dev: Thuy Viet Quoc - Tran Thanh Tam-Le Quang Canh"
+    phone: "Phone: 09091991191"
+    address: "Book Store VN"
+  home:
+    book: "Book Review System"

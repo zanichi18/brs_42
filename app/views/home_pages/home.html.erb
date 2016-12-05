@@ -1,0 +1,27 @@
+<% provide :title, t("header.home") %>
+<h1><%= t "home.book" %></h1>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <%= link_to image_tag("books/book2.jpg"), "#" %>
+    </div>
+    <div class="item">
+      <%= link_to image_tag("books/book2.jpg"), "#" %>
+    </div>  
+    <div class="item">
+      <%= link_to image_tag("books/book2.jpg"), "#" %>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel"
+    role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"
+      aria-hidden="true"></span>
+    <span class="sr-only"><%= t "prev" %></span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel"
+    role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"
+      aria-hidden="true"></span>
+    <span class="sr-only"><%= t "next" %></span>
+  </a>
+</div>
