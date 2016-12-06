@@ -85,7 +85,7 @@ $border-color: #eaeaea;
       margin: auto;
   }
 
-  #error_explanation {
+#error_explanation {
   color: red;
   ul {
     color: red;
@@ -98,4 +98,9 @@ $border-color: #eaeaea;
   .form-control {
     color: $state-danger-text;
   }
+}
+
+h1 {
+  text-align: center;
+  color: black;
 }
