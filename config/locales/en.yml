@@ -46,3 +46,44 @@ en:
       signup: "Sign up"
       create_btn: "Create my account"
       signup_title: "Sign up"
+  
+  admin:
+    base:
+      check_admin_permission:
+        denied: "You have no permission"
+      logged_in_user:
+        warning: "Please login before action!"
+    categories:
+      not_found: "The category not found"
+      category:
+        edit: "Edit"
+        delete: "Delete"
+        confirm_delete: "Category %{name} will be deleted. Are you sure to
+          continue?"
+      create:
+        created: "Category create successful"
+        create_error: "Create category fail"
+      destroy:
+        deleted: "Category delete successful"
+        delete_error: "Delete category fail"
+      edit:
+        edit: "Edit category: '%{name}'"
+        save_changes: "Save changes"
+      form:
+        name: "Category:"
+        name_holder: "Type category"
+        cancel: "Cancel"
+      index:
+        placeholder: "Enter to search..."
+        all_categories: "All categories"
+        add_category: "Add category"
+        index: "Id"
+        name: "Name"
+        total_books: "Total of books"
+        action: "Action"
+        pls_login: "Please login"
+      new:
+        add_category: "Add category"
+      update:
+        failed: "Category update failed"
+        updated: "Category update successful"

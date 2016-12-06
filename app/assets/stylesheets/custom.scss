@@ -101,6 +101,48 @@ $border-color: #eaeaea;
 }
 
 h1 {
-  text-align: center;
+  text-align: left;
   color: black;
+}
+
+/* Category */
+
+.table {
+  margin-top: 10px;
+}
+.add-category {
+  margin: 10px;
+}
+
+tr.display-category{
+  background: #394BA0;
+  border: 2px solid #a1a1a1; 
+  color:white;
+  
+  th.index {
+    text-align: center;
+    width: 110px;
+  }
+  th.total-book {
+    text-align: center;
+    width: 300px;
+  }
+  th.action {
+    text-align: center;
+    width: 200px;
+  }
+}
+tr.category {
+  td.index {
+    text-align: center;
+    width: 110px;
+  }
+  td.total-book {
+    text-align: center;
+    width: 300px;
+  }
+  td.action {
+    text-align: center;
+    width: 200px;
+  }
 }
