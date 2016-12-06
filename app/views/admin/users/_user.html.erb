@@ -1,0 +1,15 @@
+<tr class="user">
+  <td class="index"><%= index_for user_counter, @users.current_page,
+    Settings.user.per_page %></td>
+  <td class="gavata"><%= gravatar_for user, Settings.user.size %></td>
+  <td class="name"><%= user.name %></td>
+  <td class="email"><%= user.email %></td>
+  <td class="service"><%= user.is_admin? ? t(".admin") : t(".user") %></td>
+  <td class="action">
+    <% unless current_user.is_user? user %>
+      <%= link_to t(".delete"), [:admin, user], method: :delete,
+        data: {confirm: t(".confirm_delete", name: user.name)}, 
+        class: "btn btn-danger" %>
+    <% end %>
+  </td>
+</tr>

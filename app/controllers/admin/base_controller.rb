@@ -7,9 +7,9 @@ class Admin::BaseController < ApplicationController
       redirect_to root_url
     end
   end
-  
+
   def logged_in_user
-    unless logged_in?
+    unless is_logged_in?
       store_location
       flash[:danger] = t ".warning"
       redirect_to login_url

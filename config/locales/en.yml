@@ -87,3 +87,23 @@ en:
       update:
         failed: "Category update failed"
         updated: "Category update successful"
+    users:
+      destroy:
+        not_found: "The user not found"
+        deleted: "User's deleted successful"
+        error: "Delete user unsuccessful"
+      index:
+        denied: "Access denied"
+        pls_login: "Please login"
+        all_users: "All users"
+        index: "Index"
+        avatar: "Avatar"
+        name: "Name"
+        email: "Email"
+        service: "Service"
+        action: "Action"
+      user:
+        admin: "Admin"
+        user: "User"
+        confirm_delete: "User '%{name}' will be deleted. Are you sure to 
+          continue?"
