@@ -1,0 +1,13 @@
+<tr class="category">
+  <td class="index"><%= index_for category_counter, @categories.current_page,
+    Settings.category.per_page %></td>
+  <td class="name"><%= category.name %></td>
+  <td class="total-book"><%= category.books.size %></td>
+  <td class="action">
+    <%= link_to t(".edit"), edit_admin_category_path(category.id),
+      class: "btn btn-primary btn-action" %>
+    <%= link_to t(".delete"), [:admin, category], method: :delete,
+      data: {confirm: t(".confirm_delete", name: category.name)},
+      class: "btn btn-danger btn-action" %>
+  </td>
+</tr>
