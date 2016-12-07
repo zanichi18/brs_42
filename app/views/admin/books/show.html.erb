@@ -1,0 +1,41 @@
+<% provide :title, @book.title %>
+<div class="display_detail">
+<h1><%= t "admin.books.show.book_detail" %></h1>
+<div class="row">
+  <div class="col-md-3 col-md-offset-3">
+    <label><%= t "admin.books.image" %></label>
+    <%= @book.image %>
+  </div>
+  <div class="col-md-3">
+    <div>
+      <label><%= t "admin.books.title" %></label>
+      <%= @book.title %>
+    </div>
+    <div>
+      <label><%= t "admin.books.author" %></label>
+      <%= @book.author %>
+    </div>
+    <div>
+      <label><%= t "admin.books.category" %></label>
+      <%= @book.category.name %>
+    </div>
+    <div>
+      <label><%= t "admin.books.publish_date" %></label>
+      <%= @book.publish_date %>
+    </div>
+    <div>
+      <label><%= t "admin.books.number_of_pages" %></label>
+      <%= @book.number_of_pages %>
+    </div>
+    <div>
+      <label><%= t "admin.books.rate" %></label>
+      <%= @book.avg_rate %>
+    </div>
+    <div class="button-actions">
+      <%= link_to t(".edit"), edit_admin_book_path(@book),
+        class: "btn btn btn-primary" %>
+      <%= link_to t(".cancel"), admin_books_path, class: "btn btn-default" %>
+    </div>
+  </div>
+</div>
+</div>

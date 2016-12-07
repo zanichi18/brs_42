@@ -1,0 +1,19 @@
+<tr class="book">
+  <td class="index"><%= index_for book_counter, @books.current_page,
+    Settings.book.per_page %></td>
+  <td class="title"><%= book.title %></td>
+  <td class="author"><%= book.author %></td>
+  <td class="category"><%= book.category.name %></td>
+  <td class="publish_date">
+    <%= l book.publish_date, format: :format_date %></td>
+  <td class="rate"><%= book.avg_rate %></td>
+  <td class="action">
+    <%= link_to t("admin.books.book.detail"), admin_book_path(book),
+      class: "btn btn-info btn-action" %>
+    <%= link_to t("admin.books.book.edit"), edit_admin_book_path(book.id),
+      class: "btn btn-primary btn-action" %>
+    <%= link_to t("admin.books.book.delete"), [:admin, book], method: :delete,
+      data: {confirm: t("admin.books.book.confirm_delete", name: book.title)},
+      class: "btn btn-danger btn-action" %>
+  </td>
+</tr>

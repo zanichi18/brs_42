@@ -175,7 +175,7 @@ tr.display-users{
   }
   th.gavata {
     text-align: center;
-    width: 100px;
+    width: 180px;
   }
 
   th.service {
@@ -233,4 +233,77 @@ textarea.form-control{
   background: #394BA0;
   border: 2px solid #a1a1a1; 
   color: white;
+}
+/* Book */
+
+.table {
+  margin-top: 10px;
+}
+.add-book {
+  margin: 10px;
+}
+
+tr.display-book{
+  background: #394BA0;
+  border: 2px solid #a1a1a1; 
+  color: white;
+  
+  th.index {
+    text-align: center;
+    width: 90px;
+  }
+  th.publish_date {
+    width: 150px;
+  }
+  th.category {
+    width: 200px;
+  }
+  th.rate {
+    text-align: center;
+    width: 80px;
+  }
+  th.action {
+    text-align: center;
+    width: 250px;
+  }
+}
+tr.book {
+  td.index {
+    text-align: center;
+    width: 90px;
+  }
+  td.publish_date {
+    width: 150px;
+  }
+  td.category {
+    width: 150px;
+  }
+  td.rate {
+    text-align: center;
+    width: 80px;
+  }  
+  td.action {
+    text-align: center;
+    width: 250px;
+  }
+}
+h1.add_book{
+  text-align: center;
+}
+.form-actions {
+ text-align: center;
+ margin-top: 10px;
+ margin-bottom: 10px;
+}
+h1.edit_book {
+  text-align: center;
+}
+.display_detail {
+  h1{
+    text-align: center;
+  }
+  .button-actions {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
