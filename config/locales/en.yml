@@ -52,10 +52,8 @@ en:
       signup_title: "Sign up"
   admin:
     base:
-      check_admin_permission:
-        denied: "You have no permission"
-      logged_in_user:
-        warning: "Please login before action!"
+      denied: "You have not permission"
+      no_loggin_error: "Please login before action!"
     categories:
       not_found: "The category not found"
       category:
@@ -90,6 +88,26 @@ en:
       update:
         failed: "Category update failed"
         updated: "Category update successful"
+    users:
+      destroy:
+        not_found: "The user not found"
+        deleted: "User's deleted successful"
+        error: "Delete user unsuccessful"
+      index:
+        denied: "Access denied"
+        pls_login: "Please login"
+        all_users: "All users"
+        index: "Index"
+        avatar: "Avatar"
+        name: "Name"
+        email: "Email"
+        service: "Service"
+        action: "Action"
+      user:
+        admin: "Admin"
+        user: "User"
+        confirm_delete: "User '%{name}' will be deleted. Are you sure to 
+          continue?"
   sessions:
     new:
       login: "Log in"

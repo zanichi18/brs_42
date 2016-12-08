@@ -65,8 +65,8 @@ ActiveRecord::Schema.define(version: 20161202024928) do
     t.boolean  "is_favorite"
     t.integer  "user_id"
     t.integer  "book_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["book_id"], name: "index_marks_on_book_id"
     t.index ["user_id"], name: "index_marks_on_user_id"
   end
