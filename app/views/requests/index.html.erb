@@ -1,0 +1,75 @@
+<%= provide :title, t("views.requests.index.dashboard") %>
+<h1><%= t "views.requests.index.dashboard" %></h1>
+<div class="container">
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+    data-target="#myModal"><span class="glyphicon glyphicon-send"></span>
+      <%= t "views.requests.index.dashboard" %></button>
+   
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"><%= t "views.requests.index.dashboard" %></h4>
+        </div>
+
+        <div class="modal-body"  >
+          <%= form_for current_user.requests.build do |f| %>
+      
+            <div class="form-group">
+              <%= f.label :book_name %>
+              <%= f.text_field :book_name, class: "form-control", required: true,
+                pattern: t("views.requests.limit_character"),
+                title: t("views.requests.message") %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :author %>
+              <%= f.text_field :author, class: "form-control", required: true,
+                pattern: t("views.requests.limit_character"),
+                title: t("views.requests.message") %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :description %>
+              <%= f.text_area :description, class: "form-control", required: true,
+                pattern: t("views.requests.limit_character"),
+                title: t("views.requests.message") %>
+            </div>
+       
+            <div class="actions">
+              <%= f.submit t("views.requests.new.create_button"),
+                class: "btn btn-success" %>
+            </div> 
+          <% end %>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">
+            <%= t "views.requests.close" %></button>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+
+<div class="row">
+  <table class="table table-bordered">
+    <tr class="display-title">
+      <th><%= t "views.requests.index.index" %></th>
+      <th><%= t "views.requests.index.book_title" %></th>
+      <th><%= t "views.requests.index.book_author" %></th>
+      <th><%= t "views.requests.index.discription" %></th>
+      <th><%= t "views.requests.index.status" %></th>
+      <th><%= t "admin.book.action" %></th>
+    </tr>
+    <%= render @requests %>
+  </table>
+</div>
+<%= will_paginate @requests %>
+<div class="export">
+  <%= link_to t("views.requests.excel"), requests_path(format: :xls),
+    class: "btn btn-info" %>
+  <%= link_to t("views.requests.csv"), requests_path(format: :csv),
+    class: "btn btn-info" %> 
+</div>

@@ -24,6 +24,7 @@ en:
   title: "Book store"
   prev: "previous"
   next: "next"
+  not_logged_in: "Please log in!"
   welcome_message: "Welcome to Book Reviewing System"
   fail_login: "Invalid email or password"
   not_logged_in: "Please log in!"
@@ -43,6 +44,12 @@ en:
     user:
       activities: "Activities"
       requests: "Requests"
+    link_categories: "Book Library"
+    user: "Users"
+    books: "Books and Categories"
+    categories: "Categories"
+    requests: "Requests"
+    activity: "Activities"
   footer:
     developer: "Dev: Thuy Viet Quoc - Tran Thanh Tam-Le Quang Canh"
     phone: "Phone: 09091991191"
@@ -147,3 +154,39 @@ en:
   date:
     formats:
       format_date: "%d/%m/%Y"
+    requests:
+      index:
+        dashboard: "Request Book"
+        index: "Index"
+        username: "User name"
+        book_title: "Book Name"
+        book_author: "Author"
+        content: "Discription"
+        cancel_button: "Cancel"
+        delete_confirm: "Are you sure?"
+        new_button: "New request"
+        status: "Status"
+        action: "Action"
+      new:
+        title: "New Requests"
+        create_requests: "Create new request"
+        create_button: "Send request"
+      excel: "Excel"
+      csv: "CSV"
+      message: "over 50 characters"
+      limit_character: ".{1,50}"
+      close: "close"
+  controllers:
+    flash:
+      create_success: "sucess"
+      destroy_success: "User is deleted"
+      destroy_error: "User is not deleted"
+      category_create: "Category is create"
+      category_update: "Category is update"
+      category_destroy: "Category is destroy"
+      category_error: "Category is not deleted"
+    requests:
+       create_success: "Send request successfully!"
+       create_error: "Send request error!"
+       destroy_success: "Request is deleted"
+       destroy_error: "destroy is error!"

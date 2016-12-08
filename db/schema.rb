@@ -92,7 +92,7 @@ ActiveRecord::Schema.define(version: 20161202024928) do
     t.string   "book_name"
     t.string   "author"
     t.text     "description"
-    t.string   "status"
+    t.integer  "status", default: 0
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
