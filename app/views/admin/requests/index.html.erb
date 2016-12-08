@@ -1,0 +1,50 @@
+<div> 
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#processing"
+      aria-controls="processing" role="tab" data-toggle="tab">
+      <%= t "admin.views.request.processing" %></a>
+    </li>
+    <li role="presentation"><a href="#accepted" aria-controls="profile"
+      role="tab" data-toggle="tab"><%= t "admin.views.request.accepted" %></a>
+    </li>
+    <li role="presentation"><a href="#rejected" aria-controls="messages"
+      role="tab" data-toggle="tab"><%= t "admin.views.request.rejected" %></a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="processing">
+      <div class="row">
+        <table class="table table-bordered">
+          <%= render "header_table" %>
+          <%= render @requests %>
+        </table>
+        <%= will_paginate @requests, param_name: "requests_page" %>
+      </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane fade" id="accepted">
+      <div class="row">
+        <table class="table table-bordered">
+          <%= render "header_table" %>
+          <%= render @accepted %> 
+        </table>
+      </div>
+      <div class="export">
+        <%= link_to t("views.requests.excel"),
+          admin_requests_path(format: :xls), class: "btn btn-info" %>
+        <%= link_to t("views.requests.csv"),
+          admin_requests_path(format: :csv), class: "btn btn-info" %> 
+      </div> 
+    </div>
+
+    <div role="tabpanel" class="tab-pane fade" id="rejected">
+      <div class="row">
+        <table class="table table-bordered">
+          <%= render "header_table" %>
+          <%= render @rejected %>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<tr>
+  <td>
+    <%= index_for request_counter, @requests.current_page,
+      Settings.request.per_page %>
+  </td>
+  <td><%= request.user.name %></td>
+  <td><%= request.book_name %></td>
+  <td><%= request.author %></td>
+  <td><%= request.description %></td>
+  <th><%= request.status %></th>
+  <td>
+    <% if request.processing? %>
+      <%= link_to t("admin.views.accept"), admin_request_path(request,
+        value: :accepted), method: :put, class: "btn btn-success" %> 
+      <%= link_to t("admin.views.reject"), admin_request_path(request,
+        value: :rejected), method: :put, class: "btn btn-danger" %>
+    <% end %>
+  </td>
+</tr>
