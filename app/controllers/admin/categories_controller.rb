@@ -1,8 +1,8 @@
 class Admin::CategoriesController < Admin::BaseController
-  before_action :load_data, only: [:edit, :update, :destroy]
+  before_action :load_category, only: [:edit, :update, :destroy]
 
   def index
-    @categories = Category.paginate page: params[:page], 
+    @categories = Category.order_by_created_at_desc.paginate page: params[:page], 
       per_page: Settings.category.per_page
   end
   
@@ -40,6 +40,7 @@ class Admin::CategoriesController < Admin::BaseController
       redirect_to :back
     else
       flash[:danger] = t ".delete_error"
+      redirect_to admin_categories_path
     end
   end
 
@@ -48,7 +49,7 @@ class Admin::CategoriesController < Admin::BaseController
     params.require(:category).permit :name
   end
 
-  def load_data
+  def load_category
     @category = Category.find_by id: params[:id]
     unless @category
       flash[:danger] = t ".not_found"

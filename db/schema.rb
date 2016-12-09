@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20161202024928) do
     t.string   "action_type"
     t.integer  "action_id"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.index ["user_id"], name: "index_activities_on_user_id"
   end
 
@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 20161202024928) do
     t.string   "image"
     t.float    "avg_rate"
     t.integer  "category_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.index ["category_id"], name: "index_books_on_category_id"
   end
 
@@ -65,8 +65,8 @@ ActiveRecord::Schema.define(version: 20161202024928) do
     t.boolean  "is_favorite"
     t.integer  "user_id"
     t.integer  "book_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.index ["book_id"], name: "index_marks_on_book_id"
     t.index ["user_id"], name: "index_marks_on_user_id"
   end
@@ -75,8 +75,8 @@ ActiveRecord::Schema.define(version: 20161202024928) do
     t.integer  "number_rates"
     t.integer  "user_id"
     t.integer  "book_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.index ["book_id"], name: "index_rates_on_book_id"
     t.index ["user_id"], name: "index_rates_on_user_id"
   end
@@ -84,8 +84,8 @@ ActiveRecord::Schema.define(version: 20161202024928) do
   create_table "relationships", force: :cascade do |t|
     t.integer  "follower_id"
     t.integer  "followed_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "requests", force: :cascade do |t|
@@ -94,8 +94,8 @@ ActiveRecord::Schema.define(version: 20161202024928) do
     t.text     "description"
     t.string   "status"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.index ["user_id"], name: "index_requests_on_user_id"
   end
 
@@ -113,9 +113,9 @@ ActiveRecord::Schema.define(version: 20161202024928) do
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
-    t.boolean  "is_admin", default: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "is_admin",        default: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
 end
