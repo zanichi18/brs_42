@@ -1,0 +1,19 @@
+<div class="user_info">
+  <div class="user_name">
+    <%= gravatar_for @user %>
+    <span><%= link_to @user.name, @user %></span>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <%= link_to pluralize(@user.following.count, t(".following")),
+        relationships_path(user_id: @user.id, relationship: t(".following")) %>
+    </div>
+    <div class="col-md-6">
+      <p id="followers">
+        <%= link_to pluralize(@user.followers.count, t(".followers")),
+          relationships_path(user_id: @user.id, relationship: t(".followers")) %>
+      </p>
+    </div>
+  </div>
+  <div id="follow_form"><%= render partial: "shared/follow_form" if is_logged_in? %></div>
+</div>

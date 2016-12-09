@@ -307,3 +307,19 @@ h1.edit_book {
     margin-bottom: 10px;
   }
 }
+
+/*Show user info*/
+.user_info {
+  border-radius: 25px;
+  background-color: #999999;
+  padding: 20px; 
+  margin: 20px;
+  width: auto;
+  height: auto;    
+}
+
+.user_name {
+  font-size: 1.5em;
+  padding-bottom: 20px;
+  display: inline-block;
+}
