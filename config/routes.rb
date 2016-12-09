@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "/password", to: "password_changes#new"
   post "/password", to: "password_changes#create"
   resources :users
+  resources :books, only: [:index, :show]
   namespace :admin do
     resources :categories
     resources :users, only: [:index, :destroy]

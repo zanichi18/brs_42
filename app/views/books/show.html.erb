@@ -1,0 +1,37 @@
+<h1><%= @book.title %></h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-5">
+      <div>
+      <%= link_to image_tag(book_image_url @book,
+        size: Settings.book.size_big), @book %>
+      </div>
+    </div>
+  <div class="col-md-7">
+    <table class="table">
+      <tr>
+        <th><%= t "views.book.title_book" %></th>
+        <td><%= @book.title %></td>
+      </tr>
+      <tr>
+        <th><%= t "views.book.author" %></th>
+        <td><%= @book.author %></td>
+      </tr>
+      <tr>
+        <th><%= t "views.book.publish_date" %></th>
+        <td>
+          <%= @book.publish_date ? (l @book.publish_date,
+            format: :format_date) : t("views.book.not_found") %>
+        </td>
+      </tr>
+      <tr>
+        <th><%= t "views.book.number_of_page" %></th>
+        <td><%= @book.number_of_pages %></td>
+      </tr>
+      <tr>
+        <th><%= t "views.book.description" %></th>
+        <td><%= @book.description %></td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<% provide :title, t("views.book.title") %>
+<h1><%= t "views.book.list" %></h1>
+<div class="section">
+  <%= render @books %>
+</div>
+<div class="page">
+  <%= will_paginate @books %>
+  <%= page_entries_info @books %>
+</div>
