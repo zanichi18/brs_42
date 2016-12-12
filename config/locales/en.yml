@@ -26,6 +26,7 @@ en:
   next: "next"
   welcome_message: "Welcome to Book Reviewing System"
   fail_login: "Invalid email or password"
+  not_logged_in: "Please log in!"
   header:
     logo: "Book store"
     admin: "admin"
@@ -35,6 +36,7 @@ en:
     logout: "Logout"
     profile: "Profile"
     settings: "Settings"
+    password: "Change password"
   footer:
     developer: "Dev: Thuy Viet Quoc - Tran Thanh Tam-Le Quang Canh"
     phone: "Phone: 09091991191"
@@ -113,3 +115,12 @@ en:
       login: "Log in"
       signup: "Sign up now!"
       new_user: "New user?"
+  password_changes:
+    create:
+      password_success: "Password successfully changed!"
+      password_less_than_6_characters: "New password is less than 6 characters"
+      password_not_duplicate: "New password is not duplicate!"
+      password_wrong: "Wrong old password!"
+    new:
+      change_password: "Change Password"
+      save: "Save change"
