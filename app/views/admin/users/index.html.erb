@@ -1,0 +1,18 @@
+<% provide :title, t(".all_users") %>
+<h1><%= t ".all_users" %></h1>
+<table class="table table-striped table-hover">
+  <thead>
+    <tr class="display-users">
+      <th class="index"><%= t ".index" %></th>
+      <th class="gavata"><%= t ".avatar" %></th>
+      <th class="name"><%= t ".name" %></th>
+      <th class="email"><%= t ".email" %></th>
+      <th class="service"><%= t ".service" %></th>
+      <th class="action"><%= t ".action" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @users %>
+  </tbody>
+</table>
+<%= will_paginate @users %>
