@@ -4,7 +4,7 @@ class CreateRequests < ActiveRecord::Migration[5.0]
       t.string :book_name
       t.string :author
       t.text :description
-      t.string :status
+      t.integer :status, default: 0
       t.references :user, foreign_key: true
 
       t.timestamps
