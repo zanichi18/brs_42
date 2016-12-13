@@ -1,0 +1,11 @@
+<div class="mark_label">
+  <%= show_mark_type @mark.mark_type %>
+  
+  <% if @mark.is_favorite? %>
+    <%= image_tag "books/favorite.png", size: Settings.mark.size_small,
+      alt: "Favorite" %>
+  <% else %>
+    <%= image_tag "books/unfavorite.png", size: Settings.mark.size_small,
+      alt: "Unfavorite" %>
+  <% end %>
+</div>

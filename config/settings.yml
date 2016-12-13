@@ -20,3 +20,11 @@ request:
   area_rows: 3
 users:
   avatar: "http://gravatar.com/emails"
+mark:
+  size_small: "30x30"
+  favorate: "favorate"
+  unfavorate: "unfavorate"
+  read: "read"
+  reading: "reading"
+  image_reading: "books/reading.png"
+  image_read: "books/read.jpg"

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :users
   resources :books, only: [:index, :show]
   resources :requests, only: [:index, :create, :destroy]
+  resources :marks, only: [:new, :create, :update]
   namespace :admin do
     resources :categories
     resources :users, only: [:index, :destroy]

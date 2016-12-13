@@ -1,0 +1,17 @@
+<div class="mark_btn">
+  <% case @mark.mark_type %>
+  <% when Settings.mark.reading %>
+    <%= btn_read %>
+  <% when Settings.mark.read %>
+    <%= btn_reading %>  
+  <% else %>
+    <%= btn_read %>
+    <%= btn_reading %>
+  <% end %>
+
+  <% if @mark.is_favorite? %>
+    <%= btn_favorite %>
+  <% else %>
+    <%= btn_unfavorite %>
+  <% end %>
+</div>
