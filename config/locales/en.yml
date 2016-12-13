@@ -69,6 +69,43 @@ en:
     base:
       denied: "You have not permission"
       no_loggin_error: "Please login before action!"
+    books:
+      index: "Index"
+      image: "Image"
+      title: "Title"
+      description: "Description"
+      author: "Author"
+      publish_date: "Publish date"
+      number_of_pages: "Num of pages"
+      rate: "Rate"
+      category: "Category"
+      index:
+        all_books: "All books"
+      book:
+        detail: "Detail"
+        edit: "Edit"
+        delete: "Delete"
+        confirm_delete: "Book %{name} will be deleted. Are you sure to
+          continue?"
+      new:
+        add_book: "Add a new book"
+        create_book: "Create"
+      create:
+        created: "Created book successful"
+        create_error: "Create book fail"
+      edit:
+        edit_book: "Edit book"
+        save_changes: "Save changes"
+      update:
+        update_error: "Update book failed"
+        updated: "Updated book successful"
+      destroy:
+        deleted: "Deleted book successful"
+        delete_error: "Delete book fail"
+      show:
+        book_detail: "Book detail"
+      load_data:
+        not_found: "The book not found"
     categories:
       not_found: "The category not found"
       category:

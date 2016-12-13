@@ -22,3 +22,18 @@ end
   name  = "Category #{n+1}"
   Category.create!(name: name)
 end
+
+categories = Category.all
+categories.each {|category| 
+  5.times do
+    title  = "Title #{rand 1..10 }"
+    author = "Author #{rand 1..10}"
+    publish_date = "2013-10-07"
+    number_of_pages = rand 200..500
+    avg_rate = rand 1..10
+    description = Faker::Lorem.sentence 30
+    category.books.create!(title: title, author: author,
+      description: description, publish_date: publish_date,
+      number_of_pages: number_of_pages, avg_rate: avg_rate)
+  end
+}

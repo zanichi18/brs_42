@@ -1,0 +1,23 @@
+<% provide :title, t(".all_books") %>
+<h1><%= t ".all_books" %></h1>
+<div class="md-col-12 ">
+  <%= link_to t(".add_book"), new_admin_book_path,
+    class: "btn btn-success" %>
+</div>
+<table class="table table-striped table-hover">
+  <thead>
+    <tr class="display-book">
+      <th class="index"><%= t ".index" %></th>
+      <th class="title"><%= t ".title" %></th>
+      <th class="author"><%= t ".author" %></th>
+      <th class="category"><%= t ".category" %></th>
+      <th class="publish_date"><%= t ".publish_date" %></th>
+      <th class="rate"><%= t ".rate" %></th>
+      <th class="action"><%= t ".action" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @books %>
+  </tbody>
+</table>
+<%= will_paginate @books %>

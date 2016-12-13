@@ -1,0 +1,36 @@
+<%= form_for [:admin, @book], html: {class: "form-horizontal book-form",
+  id: "book_form"} do |f| %>
+  <%= render "shared/error_messages", object: @book %>
+  <div class="control-group">
+    <%= f.label :category %>
+    <%= f.select :category_id, options_for_select(
+      @categories.collect{ |category| [category.name, category.id]},
+      params[:category_id]), {}, {class: "form-control"} %>
+  </div>
+  <div class="control-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+  <div class="control-group">
+    <%= f.label :author %>
+    <%= f.text_field :author, class: "form-control" %>
+  </div>
+  <div class="control-group">
+    <%= f.label :publish_date %>
+    <%= f.date_field :publish_date, class: "form-control" %>
+  </div>
+  <div class="control-group">
+    <%= f.label :number_of_pages %>
+    <%= f.text_field :number_of_pages, class: "form-control" %>
+  </div>
+  <div class="control-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, rows: Settings.book.area_rows, 
+      class: "form-control" %>
+  </div>
+  <div class="form-actions">
+    <%= f.submit yield(:button_text), class: "btn btn-primary",
+      id: "btn_book" %>
+    <%= link_to t(".cancel"), admin_books_path, class: "btn btn-default" %>
+  </div>
+<% end %>
