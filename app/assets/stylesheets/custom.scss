@@ -159,6 +159,7 @@ tr.category {
 }
 
 /*Users*/
+
 tr.display-users{
   background: #394BA0;
   border: 2px solid #a1a1a1; 
@@ -200,4 +201,12 @@ tr.user {
     text-align: center;
     width: 150px;
   }
+  }
+
+/*book*/
+
+.frame{
+  border: 2px solid #a1a1a1;
+  padding: 10px 10px;
+  background: white;
 }

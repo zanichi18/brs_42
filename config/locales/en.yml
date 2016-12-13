@@ -124,3 +124,20 @@ en:
     new:
       change_password: "Change Password"
       save: "Save change"
+  views:
+    book:
+      title: "All books"
+      title_book: "Title"
+      list: "List books"
+      not_found: "Do not know date"
+      author: "Author"
+      description: "Description"
+      publish_date: "Publish date"
+      number_of_page: "Number of pages"
+  controller:
+    book:
+      flash:
+        fail: "not_found"
+  date:
+    formats:
+      format_date: "%d/%m/%Y"
