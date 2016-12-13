@@ -9,9 +9,11 @@ user:
 book:
   per_page: 10 
   size_small: "250x250"
-  size_big: "350x250"
+  size_big: 350
   name_max_length: 255
+  image_max_size: 5242880
   description_max_length: 1000
+  image_accept: "image/jpeg,image/gif,image/png"
 request:
   per_page: 10
   area_rows: 3

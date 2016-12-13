@@ -1,6 +1,6 @@
 class Admin::BooksController < Admin::BaseController
   before_action :load_book, except: [:index, :new, :create]
-  before_action :load_categories, only: [:new, :create, :edit]
+  before_action :load_categories, except: [:show, :destroy]
   
   def index
     @books = Book.order_created_at.paginate page: params[:page],
@@ -51,7 +51,7 @@ class Admin::BooksController < Admin::BaseController
   private
   def book_params
     params.require(:book).permit :title, :category_id, :description,
-      :publish_date, :author, :number_of_pages
+      :publish_date, :author, :number_of_pages, :image
   end
 
   def load_book

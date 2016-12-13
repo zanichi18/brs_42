@@ -1,5 +1,5 @@
-<%= form_for [:admin, @book], html: {class: "form-horizontal book-form",
-  id: "book_form"} do |f| %>
+<%= form_for [:admin, @book], html: {multipart: true, 
+  class: "form-horizontal book-form", id: "book_form"} do |f| %>
   <%= render "shared/error_messages", object: @book %>
   <div class="control-group">
     <%= f.label :category %>
@@ -27,6 +27,10 @@
     <%= f.label :description %>
     <%= f.text_area :description, rows: Settings.book.area_rows, 
       class: "form-control" %>
+  </div>
+  <div class="control-group">
+    <%= f.label :image %>
+    <%= f.file_field :image, accept: Settings.book.image_accept %>
   </div>
   <div class="form-actions">
     <%= f.submit yield(:button_text), class: "btn btn-primary",

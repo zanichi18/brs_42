@@ -86,6 +86,9 @@ en:
       number_of_pages: "Num of pages"
       rate: "Rate"
       category: "Category"
+      not_found: "The book not found"
+      max_size_error: "should be less than 5MB"
+      max_size_alert: "Maximum file size is 5MB. Please choose a smaller file."
       index:
         all_books: "All books"
       book:
