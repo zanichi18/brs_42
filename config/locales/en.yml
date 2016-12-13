@@ -29,7 +29,6 @@ en:
   not_logged_in: "Please log in!"
   header:
     logo: "Book store"
-    admin: "admin"
     home: "Home"
     signup: "Sign up"
     login : "Login"
@@ -37,6 +36,13 @@ en:
     profile: "Profile"
     settings: "Settings"
     password: "Change password"
+    admin:
+      categories: "Categories"
+      books: "Books"
+      users: "Users"
+    user:
+      activities: "Activities"
+      requests: "Requests"
   footer:
     developer: "Dev: Thuy Viet Quoc - Tran Thanh Tam-Le Quang Canh"
     phone: "Phone: 09091991191"
