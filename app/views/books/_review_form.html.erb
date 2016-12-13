@@ -1,0 +1,8 @@
+<%= form_for @review, remote: true do |f| %>
+  <div class="form-group">
+    <%= f.text_area :content, class: "form-control",
+      placeholder: t("views.review_form.your_review"), required: true %>
+    <%= f.hidden_field :book_id, value: @book.id, class: "form-control" %>
+  </div>
+  <%= f.submit t("views.review_form.send_review"), class: "btn btn-primary" %>
+<% end %>

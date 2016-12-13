@@ -351,3 +351,27 @@ h1.edit_book {
   height: 80%;
   width: 80%;
 }
+
+#new_review {
+  textarea {
+    width: 60%;
+    height: 100px;
+  }
+}
+
+#review_list {
+  margin-top: 20px;
+  input {
+    width: 60%;
+  }
+  textarea {
+    width: 60%;
+    height: 100px;
+  }
+}
+
+.timestamp {
+  color: $gray-light;
+  display: block;
+  margin-left: 30px;
+}

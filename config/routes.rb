@@ -17,4 +17,5 @@ Rails.application.routes.draw do
     resources :requests, only: [:index, :update]
   end
   resources :relationships, only: [:create, :destroy, :index]
+  resources :reviews
 end
