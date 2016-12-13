@@ -65,6 +65,13 @@ en:
       signup: "Sign up"
       create_btn: "Create my account"
       signup_title: "Sign up"
+    edit:
+      edit_profile: "Edit my profile"
+      change_avatar: "Change my avatar"
+      save_profile: "Save my profile"
+      change_password: "Change password"
+    update:
+      success_update: "Your profile is successfully updated!"
   admin:
     base:
       denied: "You have not permission"
