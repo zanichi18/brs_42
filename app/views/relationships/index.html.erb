@@ -1,0 +1,10 @@
+<% provide :title, @title %>
+<div class="row">
+  <div class="col-md-4">
+    <%= render "shared/user_info" %>
+  </div>
+  <div class="col-md-8">
+    <h1><%= @title %></h1>
+    <%= render "shared/list_users" %>
+  </div>
+</div>

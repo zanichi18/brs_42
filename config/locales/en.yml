@@ -60,6 +60,12 @@ en:
     error_messages:
       error_message: "The form contains "
       error: "error"
+    user_info:
+      following: "following"
+      followers: "followers"
+    follow_form:
+      follow: "Follow"
+      unfollow: "Unfollow"
   users:
     new:
       signup: "Sign up"
@@ -234,3 +240,12 @@ en:
        create_error: "Send request error!"
        destroy_success: "Request is deleted"
        destroy_error: "destroy is error!"
+  relationships:
+    not_found_relationship: "Not found relationship"
+    create:
+      fail_follow: "Fail to follow"
+    destroy:
+      fail_unfollow: "Fail to unfollow"
+    index:
+      following_title: "Following"
+      followers_title: "Followers"

@@ -1,0 +1,12 @@
+<% unless @user.is_user? current_user %>
+  <% if current_user.is_following? @user %>
+    <%= form_for @relationship, html: {method: :delete}, remote: true do |f| %>
+      <%= f.submit t(".unfollow"), class: "btn btn-danger form-control" %>
+    <% end %>
+  <% else %>
+    <%= form_for @relationship, remote: true do |f| %>
+      <%= hidden_field_tag :followed_id, @user.id %>
+      <%= f.submit t(".follow"), class: "btn btn-primary form-control" %>
+    <% end %>
+  <% end %>
+<% end %>

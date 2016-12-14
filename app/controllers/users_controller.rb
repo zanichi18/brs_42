@@ -26,6 +26,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find_by id: params[:id]
+    return render file: Settings.page_404_url unless @user
+    set_relationship @user
+  end
+
   private
   def user_params
     params.require(:user).permit :name, :email, :password, :password_confirmation

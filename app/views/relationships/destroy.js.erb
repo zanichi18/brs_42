@@ -1,0 +1,4 @@
+$('#follow_form').html('<%= j render "shared/follow_form" %>');
+$('#followers').html('<%= link_to pluralize(@user.followers.count,\
+  t("shared.user_info.followers")),\
+  relationships_path(user_id: @user.id, relationship: "followers") %>');
