@@ -14,4 +14,14 @@ class Book < ApplicationRecord
   validates :publish_date, presence: true
   validates :author, presence: true,
     length:{maximum: Settings.book.name_max_length}
+
+  mount_uploader :image, PictureUploader
+  validate :image_size
+  
+  private
+  def image_size
+    if image.size > Settings.book.image_max_size
+      errors.add :image, I18n.t("admin.books.max_size_error")
+    end
+  end
 end

@@ -122,6 +122,9 @@ h1 {
 
 .table {
   margin-top: 10px;
+  th {
+    width: 150px;
+  }
 }
 .add-category {
   margin-top: 10px;
@@ -236,6 +239,12 @@ textarea.form-control{
 }
 /* Book */
 
+.book_title {
+  text-align: center;
+}
+.book_image {
+  text-align:center;
+}
 .table {
   margin-top: 10px;
 }

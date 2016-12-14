@@ -1,41 +1,46 @@
-<% provide :title, @book.title %>
-<div class="display_detail">
-<h1><%= t "admin.books.show.book_detail" %></h1>
-<div class="row">
-  <div class="col-md-3 col-md-offset-3">
-    <label><%= t "admin.books.image" %></label>
-    <%= @book.image %>
+<h1 class="book_title"><%= @book.title %></h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="book_image">
+        <%= link_to image_tag(@book.image.url, size: Settings.book.size_big) %>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <table class="table">
+        <tr>
+          <th><%= t "admin.books.author" %></th>
+          <td><%= @book.author %></td>
+        </tr>
+        <tr>
+          <th><%= t "admin.books.category" %></th>
+          <td><%= @book.category.name %></td>
+        </tr>
+        <tr>
+          <th><%= t "admin.books.publish_date" %></th>
+          <td>
+            <%= @book.publish_date ? (l @book.publish_date,
+              format: :format_date) : t("admin.books.not_found") %>
+          </td>
+        </tr>
+        <tr>
+          <th><%= t "admin.books.number_of_pages" %></th>
+          <td><%= @book.number_of_pages %></td>
+        </tr>
+        <tr>
+          <th><%= t "admin.books.rate" %></th>
+          <td><%= @book.avg_rate %></td>
+        </tr>
+        <tr>
+          <th><%= t "admin.books.description" %></th>
+          <td><%= @book.description %></td>
+        </tr>
+      </table>
+      <div class="button-actions">
+        <%= link_to t(".edit"), edit_admin_book_path(@book),
+          class: "btn btn btn-primary" %>
+        <%= link_to t(".cancel"), admin_books_path, class: "btn btn-default" %>
+      </div>
+    </div>
   </div>
-  <div class="col-md-3">
-    <div>
-      <label><%= t "admin.books.title" %></label>
-      <%= @book.title %>
-    </div>
-    <div>
-      <label><%= t "admin.books.author" %></label>
-      <%= @book.author %>
-    </div>
-    <div>
-      <label><%= t "admin.books.category" %></label>
-      <%= @book.category.name %>
-    </div>
-    <div>
-      <label><%= t "admin.books.publish_date" %></label>
-      <%= @book.publish_date %>
-    </div>
-    <div>
-      <label><%= t "admin.books.number_of_pages" %></label>
-      <%= @book.number_of_pages %>
-    </div>
-    <div>
-      <label><%= t "admin.books.rate" %></label>
-      <%= @book.avg_rate %>
-    </div>
-    <div class="button-actions">
-      <%= link_to t(".edit"), edit_admin_book_path(@book),
-        class: "btn btn btn-primary" %>
-      <%= link_to t(".cancel"), admin_books_path, class: "btn btn-default" %>
-    </div>
-  </div>
-</div>
 </div>
