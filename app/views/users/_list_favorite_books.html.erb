@@ -1,0 +1,32 @@
+<% @favorite_books.each do |favorite_book| %>
+  <div class="row">
+    <div class="col-md-5">
+      <%= link_to image_tag(favorite_book.image, id: "favorite_book_image"), 
+        favorite_book %>    
+    </div>
+    <div class="col-md-7">
+      <table class="table">
+        <tr>
+          <th><%= t "views.book.title_book" %></th>
+          <td><%= favorite_book.title %></td>
+        </tr>
+        <tr>
+          <th><%= t "views.book.author" %></th>
+          <td><%= favorite_book.author %></td>
+        </tr>
+        <tr>
+          <th><%= t "views.book.publish_date" %></th>
+          <td>
+            <%= favorite_book.publish_date ? (l favorite_book.publish_date,
+              format: :format_date) : t("views.book.not_found") %>
+          </td>
+        </tr>
+        <tr>
+          <th><%= t "views.book.number_of_page" %></th>
+          <td><%= favorite_book.number_of_pages %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+<% end %>
+<%= will_paginate @favorite_books, param_name: :favorite_book_page %>

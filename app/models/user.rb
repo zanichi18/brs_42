@@ -39,6 +39,10 @@ class User < ApplicationRecord
     following.include? other_user
   end
 
+  def list_favorite_books
+    Book.of_ids Mark.favorite_book_ids_of_user self.id
+  end
+
   private
   def downcase_email
     self.email = email.downcase

@@ -17,6 +17,8 @@ class Book < ApplicationRecord
 
   mount_uploader :image, PictureUploader
   validate :image_size
+
+  scope :of_ids, -> ids {where id: ids}
   
   private
   def image_size

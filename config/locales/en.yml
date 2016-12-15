@@ -71,6 +71,8 @@ en:
       signup: "Sign up"
       create_btn: "Create my account"
       signup_title: "Sign up"
+    show:
+      my_favorite_book: "My Favorite Books"
     edit:
       edit_profile: "Edit my profile"
       change_avatar: "Change my avatar"
