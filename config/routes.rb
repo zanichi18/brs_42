@@ -19,4 +19,7 @@ Rails.application.routes.draw do
   resources :relationships, only: [:create, :destroy, :index]
   resources :reviews
   resources :likes, only: [:create, :destroy]
+  resources :reviews do
+    resources :comments
+  end
 end

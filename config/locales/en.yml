@@ -225,6 +225,11 @@ en:
       unlike: "Unlike"
     list_user_like:
       all_likes: "All likes"
+    comment_list:
+      your_comment: "Your comment....."
+      commented: "Commented"
+      ago: "ago"
+      sure: "You sure?"
   controller:
     book:
       flash:
@@ -272,6 +277,7 @@ en:
       category_error: "Category is not deleted"
       not_permission: "You are not permission"
       like_not_found: "Like not found"
+      review_not_found: "Review not found"
     requests:
        create_success: "Send request successfully!"
        create_error: "Send request error!"
