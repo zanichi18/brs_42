@@ -243,7 +243,9 @@ textarea.form-control{
   text-align: center;
 }
 .book_image {
-  text-align:center;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .table {
   margin-top: 10px;
@@ -331,4 +333,16 @@ h1.edit_book {
   font-size: 1.5em;
   padding-bottom: 20px;
   display: inline-block;
+}
+
+/* Mark */
+.mark_btn {
+  text-align: center;
+  #btn-mark{
+    width: 100px;
+  }
+}
+.mark_label {
+  margin-right: 50px;
+  text-align: right;
 }

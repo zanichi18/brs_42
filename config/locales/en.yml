@@ -252,3 +252,14 @@ en:
     index:
       following_title: "Following"
       followers_title: "Followers"
+  marks:
+    read: "Read"
+    reading: "Reading"
+    favorite: "Favorite"
+    unfavorite: "Unfavorite"
+    not_found: "Book mark not found"
+    update:
+      success: "This book is  %{status}"
+      error: "Updated mark fail"
+    create:
+      error: "Created mark fail "
