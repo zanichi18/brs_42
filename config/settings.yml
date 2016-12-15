@@ -33,3 +33,5 @@ accepted:
   per_page: 15
 rejected:
   per_page: 15
+like:
+  size_avatar: 30
