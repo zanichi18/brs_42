@@ -30,6 +30,8 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
     return render file: Settings.page_404_url unless @user
     set_relationship @user
+    @favorite_books = @user.list_favorite_books
+      .paginate page: params[:favorite_book_page], per_page: Settings.book.per_page
   end
 
   private
