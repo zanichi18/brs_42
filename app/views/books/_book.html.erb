@@ -1,5 +1,5 @@
 <div class="col-md-3 frame">
-  <%= image_tag book.image.url book, size: Settings.book.size_small %>
+  <%= image_tag book.image.url, size: Settings.book.size_small %>
   <h4><%= link_to book.title, book_path(book) %></h4>
   <p><%= book.author %></p>
 </div>

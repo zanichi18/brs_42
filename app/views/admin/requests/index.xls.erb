@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th><%= t "views.requests.index.book_title" %></th>
+    <th><%= t "views.requests.index.book_author" %></th>
+    <th><%= t "views.requests.index.discription" %></th>
+    <th><%= t "views.requests.index.status" %></th>  
+  </tr>
+  <% @accepted.each do |accepted| %>
+  <tr>
+    <td><%= accepted.book_name %></td>
+    <td><%= accepted.author %></td>
+    <td><%= accepted.description %></td>
+    <td><%= accepted.status %></td>
+  </tr>
+  <% end %>
+</table>

@@ -81,6 +81,12 @@ en:
     update:
       success_update: "Your profile is successfully updated!"
   admin:
+    controller:
+      update_success: "request is updated"
+      update_fail: "update is fail"
+    views:
+      accept: "Accept"
+      reject: "Reject"
     base:
       denied: "You have not permission"
       no_loggin_error: "Please login before action!"
@@ -202,13 +208,6 @@ en:
       description: "Description"
       publish_date: "Publish date"
       number_of_page: "Number of pages"
-  controller:
-    book:
-      flash:
-        fail: "not_found"
-  date:
-    formats:
-      format_date: "%d/%m/%Y"
     requests:
       index:
         dashboard: "Request Book"
@@ -231,6 +230,13 @@ en:
       message: "over 50 characters"
       limit_character: ".{1,50}"
       close: "close"
+  controller:
+    book:
+      flash:
+        fail: "not_found"
+  date:
+    formats:
+      format_date: "%d/%m/%Y"
   controllers:
     flash:
       create_success: "sucess"
