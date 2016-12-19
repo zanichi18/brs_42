@@ -1,0 +1,6 @@
+<%= form_for [@review, @comment], remote: true do |f| %>
+  <div class="form-group">
+    <%= f.text_field :content, class: "form-control", value: @comment.content,
+      required: true %>
+  </div>
+<% end %>
