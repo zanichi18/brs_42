@@ -1,0 +1,9 @@
+<% if review.is_liked_by? current_user %>
+  <%= link_to content_tag(:span, "", class: "glyphicon glyphicon-thumbs-down"),
+    create_like(review), method: :delete, remote: true, 
+    title: t("views.like_form.unlike") %>
+<% else %>
+  <%= link_to content_tag(:span, "", class: "glyphicon glyphicon-thumbs-up"),
+    create_like(review), method: :post, remote: true, 
+    title: t("views.like_form.like") %>
+<% end %>

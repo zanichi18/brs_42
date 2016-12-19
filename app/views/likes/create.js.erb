@@ -1,0 +1,3 @@
+$('#like_review_<%= @like.review.id %>').html('<%= j render "books/like_form", review: @like.review %>');
+$('#count_like_<%= @like.review.id %>').text('<%= t "views.like_form.like" %> (<%= @like.review.list_users_like_review.count %>)');
+$('#users_like_<%= @like.review.id %>').html('<%= j render "books/list_user_like", review: @like.review %>');
