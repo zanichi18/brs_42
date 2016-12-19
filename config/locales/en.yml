@@ -208,6 +208,25 @@ en:
       description: "Description"
       publish_date: "Publish date"
       number_of_page: "Number of pages"
+      reviews: "Reviews"
+    review_form:
+      your_review: "Your review....."
+      send_review: "Send your review"
+    review_list:
+      reviewed: "Reviewed"
+      ago: "ago"
+      like: "Like"
+      comment: "Comment"
+      sure: "Are you sure?"
+    edit_review_form:
+      save: "Save your review"
+  controller:
+    book:
+      flash:
+        fail: "not_found"
+  date:
+    formats:
+      format_date: "%d/%m/%Y"
     requests:
       index:
         dashboard: "Request Book"
@@ -246,6 +265,7 @@ en:
       category_update: "Category is update"
       category_destroy: "Category is destroy"
       category_error: "Category is not deleted"
+      not_permission: "You are not permission"
     requests:
        create_success: "Send request successfully!"
        create_error: "Send request error!"
